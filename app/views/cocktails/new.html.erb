@@ -1,0 +1,14 @@
+<%= render 'components/navbar' %>
+<div class="page-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <h1 class="main-title text-center">Create a new Cocktail</h1>
+        <%= simple_form_for(@cocktail) do |f| %>
+          <%= f.input :name %>
+          <%= f.submit class: "btn-blue" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

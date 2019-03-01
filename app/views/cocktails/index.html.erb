@@ -1,0 +1,19 @@
+<%= render 'components/navbar' %>
+<div class="page-content">
+  <div class="container">
+    <h1 class="main-title text-center">all cocktails</h1>
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)),
+           url('http://res.cloudinary.com/dehymofqg/image/upload/c_fill,h_600,w_600/pexels-photo-109275_3_vdtoud')">
+            <div class="card-details">
+              <h3><%= cocktail.name %></h3>
+            </div>
+            <%= link_to "", cocktail_path(cocktail), class: "card-link" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

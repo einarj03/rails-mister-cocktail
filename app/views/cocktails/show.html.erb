@@ -1,0 +1,38 @@
+<%= render 'components/navbar' %>
+<div class="page-content">
+  <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)),
+           url('http://res.cloudinary.com/dehymofqg/image/upload/pexels-photo-109275_3_vdtoud')">
+      <h1 class="text-center"><%= @cocktail.name %></h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <div class="ingredients">
+          <h2 class="ingredients-title">ingredients</h2>
+          <ul>
+            <% @cocktail.doses.each do |dose| %>
+              <li>
+                <%= dose.ingredient.name %>
+                 - <%= dose.description %>
+                 <%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, dose_path(dose),
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' }
+                 %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <h2 class="ingredients-title">Add an ingredient</h2>
+        <%= simple_form_for([@cocktail, Dose.new]) do |f| %>
+          <%= f.association :ingredient, input_html: { class: "select2" } %>
+          <%= f.input :description %>
+          <%= f.hidden_field :cocktail, value: @cocktail.id %>
+          <%= f.submit class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

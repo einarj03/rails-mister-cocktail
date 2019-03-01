@@ -57,3 +57,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
+
+gem 'autoprefixer-rails'
+gem 'bootstrap-sass', '~> 3.3.7'
+gem 'font-awesome-sass', '~> 5.0.9'
+gem 'simple_form'
+gem 'select2_simple_form', github: 'lndl/select2_simple_form', tag: '0.7.3'
+gem "select2-rails"

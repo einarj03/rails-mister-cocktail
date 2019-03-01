@@ -1,0 +1,71 @@
+// Place all the styles related to the cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: white;
+  h1, h2, h3, h4, h5, h6, p, a, li, label, input {
+    font-family: "courier new";
+    text-transform: lowercase;
+  }
+}
+
+label, li {
+  color: $light-gray;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1.main-title {
+  font-size: 40px;
+  color: $light-gray;
+}
+
+.cocktail-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20px 0;
+  color: white;
+  background-color: rgba(0,0,0,0.3);
+  height: 300px;
+  box-shadow: 0 0 6px #7F7F7F;
+  .card-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .card-details h3 {
+    font-size: 30px;
+  }
+}
+
+.wrapper {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  h1 {
+    color: white;
+    font-size: 50px;
+  }
+}
+
+.ingredients-title {
+  font-size: 28px;
+  color: $light-gray;
+}
+
+.page-content {
+  margin-top: 70px;
+}

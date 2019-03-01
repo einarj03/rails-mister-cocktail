@@ -1,0 +1,34 @@
+.btn-orange {
+  color: white;
+  padding: 0 20px;
+  background-color: #ED9B40;
+  font-size: 14px;
+  opacity: 0.85;
+  box-shadow: 0 0 4px #586F7C;
+  border-radius: 25px;
+  line-height: 40px;
+  padding: 0 30px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "courier new";
+  &:hover {
+    color: white;
+    background-color: #E29D52;
+  }
+}
+
+.btn-blue {
+  color: white;
+  padding: 0 20px;
+  background-color: #2F4550;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 40px;
+  padding: 0 30px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: "courier new";
+  &:hover {
+    background-color: #1E282F;
+  }
+}
