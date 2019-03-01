@@ -27,7 +27,7 @@ end
 #   serialized_cocktail = open("#{cocktail_url}#{name}").read
 
 cocktail_url = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
-10.times do
+20.times do
   serialized_cocktail = open(cocktail_url).read
   cocktail_json = JSON.parse(serialized_cocktail)['drinks'].first
   cocktail = Cocktail.new(name: cocktail_json['strDrink'])
