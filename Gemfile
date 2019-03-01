@@ -62,5 +62,5 @@ gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'simple_form'
-gem 'select2_simple_form', github: 'lndl/select2_simple_form', tag: '0.7.3'
 gem "select2-rails"
+gem 'dotenv-rails', groups: [:development, :test]
