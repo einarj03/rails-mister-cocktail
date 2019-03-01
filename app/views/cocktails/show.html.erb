@@ -28,8 +28,8 @@
         <%= simple_form_for([@cocktail, Dose.new]) do |f| %>
           <%= f.association :ingredient, input_html: { class: "select2" } %>
           <%= f.input :description %>
-          <%= f.hidden_field :cocktail, value: @cocktail.id %>
-          <%= f.submit class: "btn btn-primary" %>
+          <%= f.hidden_field :cocktail_id, value: @cocktail.id %>
+          <%= f.submit class: "btn-blue" %>
         <% end %>
       </div>
     </div>

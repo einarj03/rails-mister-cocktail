@@ -19,9 +19,10 @@ class DosesController < ApplicationController
   private
 
   def dose_params
-    dose_params = params.require(:dose).permit(:description, :cocktail, :ingredient)
-    dose_params[:ingredient] = Ingredient.find_by(name: dose_params[:ingredient])
-    dose_params[:cocktail] = Cocktail.find(dose_params[:cocktail])
+    # raise
+    dose_params = params.require(:dose).permit(:description, :cocktail_id, :ingredient_id)
+    dose_params[:ingredient] = Ingredient.find(dose_params[:ingredient_id])
+    dose_params[:cocktail] = Cocktail.find(dose_params[:cocktail_id])
     return dose_params
   end
 end
