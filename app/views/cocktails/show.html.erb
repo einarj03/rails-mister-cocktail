@@ -1,7 +1,7 @@
 <%= render 'components/navbar' %>
 <div class="page-content">
   <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)),
-           url(<%= cl_image_path @cocktail.photo, width: 1200; %>)">
+           url(<%= @cocktail.photo %>)">
       <h1 class="text-center"><%= @cocktail.name %></h1>
   </div>
   <div class="container">
