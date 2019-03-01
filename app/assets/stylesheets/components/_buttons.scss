@@ -1,7 +1,7 @@
 .btn-orange {
   color: white;
   padding: 0 20px;
-  background-color: #ED9B40;
+  background-color: $orange;
   font-size: 14px;
   opacity: 0.85;
   box-shadow: 0 0 4px #586F7C;
@@ -13,7 +13,7 @@
   font-family: "courier new";
   &:hover {
     color: white;
-    background-color: #E29D52;
+    background-color: $dark-orange;
   }
 }
 

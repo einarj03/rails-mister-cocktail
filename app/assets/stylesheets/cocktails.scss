@@ -69,3 +69,10 @@ h1.main-title {
 .page-content {
   margin-top: 70px;
 }
+
+.orange-icon-link {
+  color: $orange;
+  &:hover {
+    color: $dark-orange;
+  }
+}

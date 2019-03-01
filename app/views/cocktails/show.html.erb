@@ -1,7 +1,7 @@
 <%= render 'components/navbar' %>
 <div class="page-content">
   <div class="wrapper" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)),
-           url('http://res.cloudinary.com/dehymofqg/image/upload/pexels-photo-109275_3_vdtoud')">
+           url(<%= cl_image_path @cocktail.photo, width: 1200; %>)">
       <h1 class="text-center"><%= @cocktail.name %></h1>
   </div>
   <div class="container">
@@ -14,10 +14,9 @@
               <li>
                 <%= dose.ingredient.name %>
                  - <%= dose.description %>
-                 <%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, dose_path(dose),
-                 method: :delete,
-                 data: { confirm: 'Are you sure?' }
-                 %>
+                 <%= link_to dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' }, class: "orange-icon-link" do %>
+                  <i class="fas fa-trash-alt"></i>
+                 <% end %>
               </li>
             <% end %>
           </ul>
